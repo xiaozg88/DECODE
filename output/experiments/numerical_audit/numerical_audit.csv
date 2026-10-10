@@ -1,0 +1,16 @@
+﻿分析,指标,数值,来源 CSV,样本 / 过滤,主文位置,SI 位置
+四种测量口径国家内极差,中位数 / 最大值,30.7 / 77.8 pp,interstudy_comparison/interstudy_60min_comparison.csv,30 国,§2.1 / 摘要,S15.2、表 S11
+顺序无关（Shapley）分解,纯边增量 / 捕捉均值,+40.0 / -37.5 pp,shapley_decomposition/shapley_all_countries.csv,30 国 × 卫生/教育（60 行）,§2.2、摘要,S15.5、表 S14
+顺序无关（Shapley）分解,路径极差（最大）,75.6 pp,shapley_decomposition/shapley_all_countries.csv,60 行,§2.2,S15.5、表 S14
+纯边增量范围,最小 ~ 最大,+0.22 ~ +44.23 pp,direction_law_v2/nested_decomposition.csv,60 行,§2.2、讨论,S15.1、表 S10
+显式接入成本（纯边增量均值）,零成本 / 5 km/h,+2.5 / +17.8 pp,access_cost_model/access_cost_all_countries.csv,30 国 × 卫生/教育,§2.2、图 3,S15.8、表 S17
+显式接入成本（60 分钟份额，步行 5 km/h）,均值 / 最大下降,-6.3 / -29.8 pp,access_cost_model/access_cost_all_countries.csv,30 国 × 卫生/教育,限制①,S15.8、表 S17
+空间聚合（先平均后判阈值）,0.05° / 0.10° 平均变化,-24.2 / -35.8 pp,experiment_10_spatial_sensitivity/spatial_sensitivity_summary.csv,7 核心国 × 卫生/教育 × 基准/灾害（28 行）,§2.3,S8、表 S6、图 S15
+设施定义（仅医院 vs 医院+诊所）,平均 / 最大损失,+4.2 / +30.4 pp,facility_scenarios/facility_scenario_shares.csv,30 国卫生,§2.3、图 4,S2、表 S2
+主干覆盖率差分回归,样本内 R² / LOCO 外样本 R² / 方向正确率,0.768 / 0.714 / 83.3%,review_stats_v7/summary.txt + direction_law_v2,60 行,§2.4,S15.6、表 S15
+缺失道路压力测试（随机删除 50%）,60 分钟份额平均变化,-55.1 pp,missing_road_stress/stress_all.csv,10 代表国 × 卫生/教育,限制⑤,S15.7、表 S16
+缺失道路压力测试（删除未铺装）,60 分钟份额平均变化,-15.1 pp,missing_road_stress/stress_all.csv,10 代表国 × 卫生/教育,限制⑤,S15.7、表 S16
+缺失道路压力测试（删除低等级）,60 分钟份额平均变化,-61.6 pp,missing_road_stress/stress_all.csv,10 代表国 × 卫生/教育,限制⑤,S15.7、表 S16
+非随机缺失（乡村/低人口/偏远）,总体损失（vs 同比例随机）,32.1（偏远 50%）/ 9.1（乡村∩低人口 21%）pp；随机高 15–23 pp,nonrandom_missing_road_stress/stress_nonrandom_summary.csv,10 代表国 × 卫生/教育,限制⑤、§4.8,S15.10、表 S19
+GRIP4 校准删除,校准比例均值 / 校准损失（vs 随机）,78% / 48.3 pp（随机 61.9 pp）,grip4_calibrated_stress/grip4_calib_summary.csv,10 代表国 × 卫生/教育,限制⑤,S15.10、表 S20
+层级混合模型（国家 + 服务）,服务[卫生]效应 / 斜率,-2.1 pp（p=0.14）/ -0.75（SE 0.07）,hierarchical_mixed_model/summary.txt,60 行,§4.6,S15.6、表 S15

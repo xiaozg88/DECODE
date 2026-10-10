@@ -1,0 +1,66 @@
+{
+ "delta_pub": {
+  "complete": {
+   "obs_r2": 0.7677,
+   "null_mean": 0.0169,
+   "null_sd": 0.0226,
+   "null_q025": 0.0,
+   "null_q50": 0.008,
+   "null_q975": 0.0825,
+   "obs_percentile": 100.0,
+   "verdict": "观测落在零分布之外（拟合不优于随机耦合）"
+  },
+  "stratified": {
+   "obs_r2": 0.7677,
+   "null_mean": 0.0175,
+   "null_sd": 0.0235,
+   "null_q025": 0.0,
+   "null_q50": 0.0085,
+   "null_q975": 0.0836,
+   "obs_percentile": 100.0,
+   "verdict": "观测落在零分布之外（拟合不优于随机耦合）"
+  },
+  "block_bootstrap": {
+   "obs_r2": 0.7677,
+   "null_mean": 0.7655,
+   "null_sd": 0.0792,
+   "null_q025": 0.6169,
+   "null_q50": 0.7639,
+   "null_q975": 0.907,
+   "obs_percentile": 51.85,
+   "verdict": "观测落在零分布内"
+  }
+ },
+ "delta_total": {
+  "complete": {
+   "obs_r2": 0.0623,
+   "null_mean": 0.0169,
+   "null_sd": 0.0226,
+   "null_q025": 0.0,
+   "null_q50": 0.0077,
+   "null_q975": 0.0864,
+   "obs_percentile": 94.4,
+   "verdict": "观测落在零分布内"
+  },
+  "stratified": {
+   "obs_r2": 0.0623,
+   "null_mean": 0.0167,
+   "null_sd": 0.0241,
+   "null_q025": 0.0,
+   "null_q50": 0.0079,
+   "null_q975": 0.083,
+   "obs_percentile": 94.7,
+   "verdict": "观测落在零分布内"
+  },
+  "block_bootstrap": {
+   "obs_r2": 0.0623,
+   "null_mean": 0.0588,
+   "null_sd": 0.0389,
+   "null_q025": 0.0019,
+   "null_q50": 0.0541,
+   "null_q975": 0.1445,
+   "obs_percentile": 57.85,
+   "verdict": "观测落在零分布内"
+  }
+ }
+}

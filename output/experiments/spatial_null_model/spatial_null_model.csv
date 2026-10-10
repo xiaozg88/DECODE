@@ -1,0 +1,5 @@
+﻿iso3,service,observed_loss_pp,clustered_null_mean_pp,clustered_null_p2_5_pp,clustered_null_p97_5_pp,draws,affected_unpaved_km_target,affected_paved_km_target
+MOZ,health,25.252,22.106,16.712,25.348,10,46057.2,122570.9
+MOZ,school,16.081,14.452,12.475,15.743,10,46057.2,122570.9
+PAK,health,20.733,21.08,19.592,22.062,10,46954.2,562655.4
+PAK,school,20.157,20.501,19.274,21.307,10,46954.2,562655.4

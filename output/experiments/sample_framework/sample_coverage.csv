@@ -1,0 +1,14 @@
+﻿维度,取值,国家数 / 数值,备注
+收入组,low,4,世界银行 2020
+收入组,lower-middle,18,世界银行 2020
+收入组,upper-middle,8,世界银行 2020
+地理区域,East Asia & Pacific,5,世界银行区域
+地理区域,Europe & Central Asia,3,世界银行区域
+地理区域,Latin America & Caribbean,5,世界银行区域
+地理区域,Middle East & North Africa,2,世界银行区域
+地理区域,South Asia,5,世界银行区域
+地理区域,Sub-Saharan Africa,10,世界银行区域
+灾害类型,合计,10,"cyclone,drought,earthquake,flash flood,flood,hurricane,landslide,monsoon,typhoon,volcano"
+路网密度,范围 (km/km2),0.175–2.559,14.6×
+路网密度,中位数 (km/km2),0.839,—
+核心 / 扩充,7 + 23,7 + 23,核心国为灾害高暴露且 Planet 主干路面可得
