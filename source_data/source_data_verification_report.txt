@@ -1,0 +1,54 @@
+Source Data 系统核验报告（v2，统计层级修正版）
+================================================================
+文件：E:\nature communications\02_logistics_supply_chain\planet-roads-plots-main\github_upload\DECODE\source_data\source_data_v32.xlsx
+核验项：39　通过：39　失败：0
+层级约定：图 2/4 的 sheet 为国家级均值（与图一致）；论文正文统计
+（72.17 / r=-0.786 / 19 国 / R2 0.77 / 0.06）为 60 行服务级，
+已写入对应 sheet 注释，并在本报告中由源 CSV 行级重算复核。
+================================================================
+
+[PASS] Fig1a median abs diff (pp): 论文=18.76 | 数据=18.76
+[PASS] Fig1a max abs diff (pp): 论文=75.29 | 数据=75.29
+[PASS] Fig1a n countries: 论文=30 | 数据=30
+[PASS] Fig1b median range (pp): 论文=30.66 | 数据=30.66
+[PASS] Fig1b max range (pp): 论文=77.78 | 数据=77.78
+[PASS] Fig1b max country: 论文=EGY | 数据=EGY
+[PASS] Fig1b countries >20pp: 论文=24 | 数据=24
+[PASS] Fig2a 国家级 mean baseline diff (pp): 论文=12.13 | 数据=12.13
+[PASS] Fig2a 论文级 max baseline diff (pp, 60 行): 论文=72.17 | 数据=72.17
+[PASS] Fig2a note 记录 row-level max: 论文=72.17 | 数据=72.17
+[PASS] Fig2b 论文级 Pearson r (60 行): 论文=-0.786 | 数据=-0.786
+[PASS] Fig2b note 记录 r: 论文=-0.786 | 数据=-0.786
+[PASS] Fig3a sign reverses rows: 论文=31 | 数据=31
+[PASS] Fig3a total rows: 论文=60 | 数据=60
+[PASS] Fig3b r (capture loss vs delta_conv): 论文=-0.976 | 数据=-0.976
+[PASS] Fig3c mean baseline (reverses): 论文=93.7 | 数据=93.7
+[PASS] Fig3c mean baseline (holds): 论文=76.4 | 数据=76.4
+[PASS] Fig4b 论文级 negative service rows: 论文=31 | 数据=31
+[PASS] Fig4b 论文级 negative countries (>=1 svc): 论文=19 | 数据=19
+[PASS] Fig4b note 记录 negative countries: 论文=19/30 | 数据=19/30
+[PASS] Fig4c 论文级 legacy R2 (60 行): 论文=0.77 | 数据=0.77
+[PASS] Fig4c 论文级 same-baseline R2 (60 行): 论文=0.06 | 数据=0.06
+[PASS] Fig4c note 记录 R2: 论文=0.77 | 数据=0.77
+[PASS] Fig5a n cases: 论文=12 | 数据=12
+[PASS] Fig5b n rows (top 15): 论文=15 | 数据=15
+[PASS] Fig5d max hospital-only penalty (pp): 论文=30.37 | 数据=30.37
+[PASS] Fig6a total pop (billion): 论文=3.45 | 数据=3.45
+[PASS] Fig6a flip pop (million): 论文=985.0 | 数据=985.0
+[PASS] Fig6a flip share (%): 论文=28.6 | 数据=28.6
+[PASS] Fig6a top3 countries: 论文=['IND', 'NGA', 'BGD'] | 数据=['IND', 'NGA', 'BGD']
+[PASS] Fig6b r (CC share vs flip share): 论文=-0.33 | 数据=-0.33
+[PASS] Fig6b n: 论文=13 | 数据=13
+[PASS] Table2 MAP-arterial R2: 论文=0.754 | 数据=0.754
+[PASS] Table2 MAP-arterial LOCO: 论文=0.717 | 数据=0.717
+[PASS] Table2 MAP-arterial n_neg: 论文=3 | 数据=3
+[PASS] Table1 delta_edge min: 论文=0.22 | 数据=0.22
+[PASS] Table1 delta_edge negative rows: 论文=0 | 数据=0
+[PASS] Table1 delta_conv negative rows: 论文=60 | 数据=60
+[PASS] Table1 delta_total negative rows: 论文=31 | 数据=31
+
+================================================================
+结论：35+ 项头条数字全部与论文正文/图注/表格一致；
+每个 sheet 的面板标识、表头与数值均按官方示例格式生成；
+行级统计已同时写入 sheet 注释并由 nested_decomposition.csv 复核。
+生成脚本：make_source_data_v32.py；核验脚本：verify_source_data.py。
