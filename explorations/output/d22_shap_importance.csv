@@ -1,0 +1,17 @@
+﻿outcome,feature,mean_abs_shap
+delta_edges,urban_share_pct,4.519148826599121
+delta_edges,arterial_coverage,3.993877649307251
+delta_edges,grip4_density_km_km2,1.3217506408691406
+delta_edges,road_density_km_per_km2,1.1875522136688232
+delta_edges,population_density_per_km2,1.0111862421035767
+delta_edges,region_Sub-Saharan Africa,0.669157862663269
+delta_edges,planet_known_share_pct,0.5726308226585388
+delta_edges,arterial_length_share_pct,0.3753648102283478
+delta_published,arterial_coverage,13.339299201965332
+delta_published,road_density_km_per_km2,2.000925302505493
+delta_published,region_Middle East & North Africa,1.462420105934143
+delta_published,arterial_length_share_pct,1.456475853919983
+delta_published,urban_share_pct,1.0694763660430908
+delta_published,population_density_per_km2,0.9420108199119568
+delta_published,grip4_density_km_km2,0.7490127682685852
+delta_published,planet_known_share_pct,0.49659213423728943

@@ -1,0 +1,24 @@
+===== SHAP: delta_edges (n=60) =====
+LOCO out-of-sample R2=0.077 MAE=6.44 pp  base=+9.60
+top-8 |SHAP| importance and direction:
+  urban_share_pct                 4.519  (negative)
+  arterial_coverage               3.994  (negative)
+  grip4_density_km_km2            1.322  (positive)
+  road_density_km_per_km2         1.188  (positive)
+  population_density_per_km2      1.011  (positive)
+  region_Sub-Saharan Africa       0.669  (negative)
+  planet_known_share_pct          0.573  (positive)
+  arterial_length_share_pct       0.375  (negative)
+
+===== SHAP: delta_published (n=60) =====
+LOCO out-of-sample R2=0.785 MAE=6.87 pp  base=+15.40
+top-8 |SHAP| importance and direction:
+  arterial_coverage              13.339  (negative)
+  road_density_km_per_km2         2.001  (positive)
+  region_Middle East & North Africa    1.462  (positive)
+  arterial_length_share_pct       1.456  (positive)
+  urban_share_pct                 1.069  (positive)
+  population_density_per_km2      0.942  (positive)
+  grip4_density_km_km2            0.749  (positive)
+  planet_known_share_pct          0.497  (positive)
+

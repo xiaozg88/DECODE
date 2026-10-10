@@ -1,0 +1,13 @@
+﻿source,iso3,records,capacity_field,coverage_pct,has_bed_count,has_staff_count
+healthsites,IDN,17862,beds/staff,0.0,False,False
+healthsites,KHM,1371,beds/staff,0.0,False,False
+healthsites,LKA,2003,beds/staff,0.04992511233150275,True,False
+healthsites,MLI,1513,beds/staff,0.991407799074686,False,True
+healthsites,NGA,7253,beds/staff,0.0,False,False
+healthsites,NPL,6859,beds/staff,0.0,False,False
+healthsites,SEN,1901,beds/staff,0.0,False,False
+healthsites,TZA,7061,beds/staff,0.424868998725393,True,True
+healthsites,ZMB,1669,beds/staff,0.05991611743559017,False,True
+registry:ETH,ETH,40525,none,0.0,False,False
+registry:MOZ,MOZ,1590,none,0.0,False,False
+registry:BGD,BGD,78129,none,0.0,False,False

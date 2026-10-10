@@ -1,0 +1,5 @@
+﻿iso3,service,baseline_60min_pct,observed_60min_pct,observed_loss_pp,loss_removal_only_pp,loss_doubling_only_pp,null_mean_loss_pp,null_p2_5_pp,null_p97_5_pp,draws,network_km,unpaved_km_total,affected_unpaved_km_target,affected_paved_km_target
+MOZ,health,75.532,50.279,25.252,18.816,9.133,26.26,25.925,26.573,20,276811.7,65051.4,46057.2,122570.9
+MOZ,school,54.547,38.466,16.081,10.152,8.498,17.82,17.56,18.057,20,276811.7,65051.4,46057.2,122570.9
+PAK,health,87.084,66.351,20.733,3.26,17.751,20.579,20.522,20.658,20,694777.9,60100.7,46954.2,562655.4
+PAK,school,85.785,65.628,20.157,3.817,16.94,19.984,19.887,20.121,20,694777.9,60100.7,46954.2,562655.4

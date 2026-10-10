@@ -1,0 +1,73 @@
+=== 1. reproduction check (nested B_full vs published corrected) ===
+n=60  mean gap=+0.001 pp  max |gap|=0.052 pp
+
+=== 2. decomposition of the published delta (pp) ===
+       delta_published  delta_edges  delta_snapping  delta_residual
+count            60.00        60.00           60.00           60.00
+mean             15.20         9.71           -7.25           12.74
+std              20.32        10.01            4.45           19.21
+min             -24.46         0.22          -28.66          -15.47
+25%               1.21         3.13           -9.43            0.57
+50%               9.01         6.07           -6.64            4.63
+75%              25.14        14.16           -4.19           24.59
+max              75.29        44.23           -0.87           73.48
+delta_edges < 0 in 0 of 60 rows
+
+=== 2b. residual decomposition: R = baseline_diff + protocol_gap ===
+legacy_baseline  (published arterial-only) : min 21.71 median 79.60 mean 73.17 max 99.11
+nested_baseline  (A_arterial_nested)   : min 51.34 median 91.01 mean 85.30 max 99.78
+baseline_diff    (nested - legacy)    : min -16.48 median +4.49 mean +12.13 max +72.17
+  |baseline_diff| > 10 pp : 27/60 rows
+  |baseline_diff| > 20 pp : 18/60 rows
+  baseline_diff > 0        : 47/60 rows
+Pearson(baseline_diff, arterial_coverage) = -0.7857
+protocol_gap     (published - B_full)  : min -0.002 median +0.361 mean +0.616 max +4.234
+  |protocol_gap| > 0.052 pp: 47/60 rows
+reproduction_gap (B_full - noded)     : min +0.0000 median +0.0000 max 0.0517
+identity check  max|R - baseline_diff - protocol_gap| = 0.0000000000
+
+=== 3. law variants ===
+                                             variant  n  slope  intercept  pearson  spearman    r2  p_slope  break_even_x  slope_ci_lo  slope_ci_hi  break_even_ci_lo  break_even_ci_hi
+      published: delta_published ~ arterial coverage 60 -0.817     75.012   -0.876    -0.893 0.768    0.000        91.765       -0.964       -0.647            88.926            95.236
+             nested: delta_edges ~ arterial coverage 60 -0.120     18.483   -0.261    -0.512 0.068    0.044       154.089       -0.220       -0.054           120.331           255.552
+      convention: delta_snapping ~ arterial coverage 60  0.001     -7.357    0.007     0.109 0.000    0.957      5111.854       -0.048        0.048         -3870.581          4814.059
+   published delta ~ geometric arterial length share 60  1.346     -5.420    0.309     0.360 0.096    0.016         4.026        0.435        2.526           -16.149             8.550
+nested delta_edges ~ geometric arterial length share 60 -0.107     11.344   -0.050    -0.061 0.002    0.705       106.053       -0.697        0.496          -369.922           439.725
+                      published delta ~ road density 60  9.705      4.619    0.334     0.380 0.112    0.009        -0.476        2.274       17.660            -4.937             0.287
+       corrected ~ arterial coverage (slope<>1 test) 60  0.195     73.465    0.401     0.337 0.161    0.002      -376.180        0.038        0.351         -1980.457          -169.104
+     nested corrected (B_shared) ~ arterial coverage 60  0.194     80.821    0.536     0.540 0.287    0.000      -416.921        0.082        0.326         -1098.053          -212.610
+
+=== 4. slope != 1 test for corrected ~ arterial coverage ===
+slope=0.195 (se 0.059), t=-13.73, p=0.00e+00
+
+=== 5. permutation null for the published difference-score form ===
+observed: slope=-0.817 r=-0.876 r2=0.768
+null (shuffled corrected outcome): slope mean=-1.002 [-1.118, -0.868], |r| mean=0.900, r2 mean=0.810 [0.774, 0.848]
+observed r2 percentile inside the null = 0.8%
+
+=== 6. country-level (n=30) re-estimation ===
+{'variant': 'published, country means', 'n': 30, 'slope': -0.8502146138796638, 'intercept': 77.41037936724035, 'pearson': -0.8912716084675459, 'spearman': -0.9119021134593993, 'r2': 0.7943650800603269, 'p_slope': 4.019341931823509e-11, 'break_even_x': 91.04804610921065, 'slope_ci_lo': -1.0975296085766413, 'slope_ci_hi': -0.601241016327049, 'break_even_ci_lo': 87.4716147212897, 'break_even_ci_hi': 96.36884477753192}
+{'variant': 'nested delta_edges, country means', 'n': 30, 'slope': -0.09021617455992341, 'intercept': 16.307318025917365, 'pearson': -0.19862512628602566, 'spearman': -0.4113459399332592, 'r2': 0.03945194079213876, 'p_slope': 0.2927001352435473, 'break_even_x': 180.75825211459963, 'slope_ci_lo': -0.21559737974153553, 'slope_ci_hi': -6.550271893986478e-05, 'break_even_ci_lo': 93.31653351832425, 'break_even_ci_hi': 805.2541316986112}
+mixed model (country random intercept): slope=-0.710 (se 0.072, p=3.52e-23)
+
+=== 7. global speed calibration (item R5) ===
+B_full: mean 60-min share 87.75%, range 52.45-99.12
+B_full_speed115: mean 60-min share 89.38%, range 57.38-99.14
+B_full_speed130: mean 60-min share 90.61%, range 61.33-99.15
+{'variant': 'delta (speed x1.15) ~ arterial coverage', 'n': 60, 'slope': -0.1521375169155188, 'intercept': 15.21042013492307, 'pearson': -0.30906788399299034, 'spearman': -0.46890803000833575, 'r2': 0.09552295691590451, 'p_slope': 0.01626919744748803, 'break_even_x': 99.97810167606022}
+{'variant': 'delta (speed x1.3) ~ arterial coverage', 'n': 60, 'slope': -0.17807683934216528, 'intercept': 18.339965423640905, 'pearson': -0.3502863570989167, 'spearman': -0.5024173381494861, 'r2': 0.12270053196963004, 'p_slope': 0.0060742465485350275, 'break_even_x': 102.98905512581356}
+
+=== 8. decomposition by country (largest |delta_edges|) ===
+iso3   service  arterial_coverage  delta_published  delta_edges  delta_snapping  delta_residual
+ KHM    health              64.49            22.05        44.23          -10.80          -11.38
+ GTM    health              73.97             9.01        37.23          -12.76          -15.47
+ IND education              55.31            37.41        36.99           -4.20            4.63
+ IND    health              77.74            20.32        30.57           -2.01           -8.25
+ GTM education              82.52             4.37        30.42          -11.01          -15.04
+ KHM education              85.29             9.02        23.09           -5.72           -8.35
+ BGD    health              72.17            20.94        22.33           -6.49            5.09
+ GEO    health              85.48            11.83        19.26           -3.45           -3.98
+ SEN    health              58.73            25.99        18.56           -9.19           16.61
+ HND    health              76.60             8.34        18.25          -11.38            1.46
+ NGA education              30.91            41.99        17.01           -7.48           32.46
+ NGA    health              40.28            37.04        16.26           -9.00           29.78
